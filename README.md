@@ -1,16 +1,8 @@
-Vim plugins for development with Robot framework
-
-FUNCTIONALITY
-------------------------------------------
- * {rtp}/after/syntax/robot.vim - Robot syntax plugin for text, space-delimited files.
- * {rtp}/ftdetect/robot.vim     - Robot filetype recognition plugin for text, space-delimited files.
+# Robot Framework syntax highlighting for Vim
 
 INSTALLATION
 ------------------------------------------
-Quickly install by:
-
- * git clone git://github.com/mfukar/robotframework-vim.git
- * cd robotframework-vim && cp -R * ~/.vim/
+Use [Vim Plug](https://github.com/junegunn/vim-plug) or [Vundle](https://github.com/VundleVim/Vundle.vim)
 
 USAGE
 ------------------------------------------
