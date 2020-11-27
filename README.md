@@ -6,8 +6,7 @@ Use [Vim Plug](https://github.com/junegunn/vim-plug) or [Vundle](https://github.
 
 USAGE
 ------------------------------------------
- * To enable syntax highlighting in vim, you may add this line at the beginning
-   of a Robot Framework file(s):
+ * For standard Robot Framework files (\*.robot and \*.resource) file type detection works automatically and for \*.txt, \*.rst, and \*.html files you should add the following header
 
     `# -*- coding: robot -*-`
 

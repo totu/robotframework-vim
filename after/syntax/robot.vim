@@ -1,9 +1,8 @@
 "=============================================================================
 " File:         after/syntax/robot.vim
-" Author:       Michael Foukarakis & top1
+" Author:       Michael Foukarakis & Topi Tuulensuu
 " Version:      0.3
 " Created:      Fri 17 Dec 2010 11:31:46 AM EET
-" Last Update:  NOW
 "------------------------------------------------------------------------
 " Description:
 "       Syntax file for Robot test framework files.
@@ -15,7 +14,7 @@
 "       0.1 - Robot now has a standard library, containing all sorts of goodies.
 "       0.2 - Add all built-in, ssh and selenium library keywords.
 "             Fix to match longest pattern instead of the first one.
-"       0.3 - Add more shit
+"       0.3 - Fixing bugs and adding stuff
 " TODO:
 "       * Figure out a neater alternative for the monster path regex
 "=============================================================================
