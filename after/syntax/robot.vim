@@ -25,7 +25,7 @@ set cpo&vim
 "------------------------------------------------------------------------
 syn match robotNumber               display "\<\d\+\>"
 syn match errorMsg                  display ".*TODO.*"
-syn match errorMsg                  display "\c\(Target.Sleep\|Sleep\).*"
+syn match errorMsg                  display "\c\(Target.Sleep\|Sleep\|Disconnect.*and sleep\).*"
 syn match errorMsg                  display "\c\There are no interfaces I could wait so I must sleep here.*"
 syn match robotNumber               display "\(false\|true\)"
 syn match robotNumber               display "\(NONE\|UP\|DOWN\|registered\|assigned\|being_fixed\|fixed\|served\)\(  \|$\)"
