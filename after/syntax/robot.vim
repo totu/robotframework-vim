@@ -26,6 +26,7 @@ set cpo&vim
 syn match robotNumber               display "\<\d\+\>"
 syn match errorMsg                  display ".*TODO.*"
 syn match errorMsg                  display "\c\(Target.Sleep\|Sleep\).*"
+syn match errorMsg                  display "\c\There are no interfaces I could wait so I must sleep here.*"
 syn match robotNumber               display "\(false\|true\)"
 syn match robotNumber               display "\(NONE\|UP\|DOWN\|registered\|assigned\|being_fixed\|fixed\|served\)\(  \|$\)"
 syn match robotEllipsis             display "\.\.\."
@@ -78,13 +79,12 @@ syn match sshLibrary                "\c\<\(Write Until Expected Output\|Write Ba
 " The built-in standard library comes last to re-match the keywords already caught.
 " See and follow listing order as above.
 syn match builtInLibrary            "\c\<\(WITH NAME\|AND\|Wait Until Keyword Succeeds\|Variable Should Not Exist\|Variable Should Exist\|Should Start With\|Should Not Start With\|Should Not Match Regexp\|Should Not Match\|Should Not End With\|Should Not Contain\|Should Not Be True\|Should Not Be Equal As Strings\|Should Not Be Equal As Numbers\|Should Not Be Equal As Integers\|Should Not Be Equal\|Should Not Be Empty\|Should Match Regexp\|Should Match\|Should End With\|Should Contain X Times\|Should Contain\|Should Be True\|Should Be Equal As Strings\|Should Be Equal As Numbers\|Should Be Equal As Integers\|Should Be Equal\|Should Be Empty\|Set Variable If\|Set Variable\|Set Test Variable\|Set Test Message\|Set Test Documentation\|Set Tags\|Set Suite Variable\|Set Suite Metadata\|Set Suite Documentation\|Set Log Level\|Set Library Search Order\|Set Global Variable\|Run Keyword Unless\|Run Keywords\|Run Keyword If Timeout Occurred\|Run Keyword If Test Passed\|Run Keyword If Test Failed\|Run Keyword If Any Tests Failed\|Run Keyword If Any Critical Tests Failed\|Run Keyword If All Tests Passed\|Run Keyword If All Critical Tests Passed\|Run Keyword If\|Run Keyword And Return Status\|Run Keyword And Return If\|Run Keyword And Return\|Run Keyword And Ignore Error\|Run Keyword And Expect Error\|Run Keyword And Continue On Failure\|Run Keyword\|Return From Keyword If\|Return From Keyword\|Replace Variables\|Repeat Keyword\|Remove Tags\|Regexp Escape\|Pass Execution If\|Pass Execution\|No Operation\|Log Variables\|Log To Console\|Log Many\|Log\|Length Should Be\|Keyword Should Exist\|Import Variables\|Import Resource\|Import Library\|Get Variable Value\|Get Variables\|Get Time\|Get Library Instance\|Get Length\|Get Count\|Fatal Error\|Fail\|Exit For Loop If\|Exit For Loop\|Evaluate\|Create List\|Convert To String\|Convert To Octal\|Convert To Number\|Convert To Integer\|Convert To Hex\|Convert To Bytes\|Convert To Boolean\|Convert To Binary\|Continue For Loop If\|Continue For Loop\|Catenate\|Call Method\)\>"
-"syn match omaLib                    display "\(\s\)\{4\}\(\w\+\(\s\|$\)\)*"
 
 "------------------------------------------------------------------------
 " Regions
 "------------------------------------------------------------------------
-" Single-line comments. Are there multi-line comments?
-syn region errorMsg     display start="#\|comment\|Comment" excludenl end="$"
+" Single & Multi-line comments.
+syn region errorMsg     display start="#\|comment\|Comment" excludenl end="\(^\s\s\s\s\)\@<=\ze[^\.]"
 syn region robotString      start="\"" excludenl end='"'
 
 "------------------------------------------------------------------------
@@ -113,9 +113,6 @@ hi def link robotTestcaseSet        Keyword
 hi def link robotGherkin            Keyword
 
 hi def link builtInLibrary          Identifier
-hi def link omaLibrary              Identifier
-hi def link omaLibrary2              Identifier
-hi def link omaLibrary3              Identifier
 hi def link collectionsLibrary      Keyword
 hi def link dateTimeLibrary         Keyword
 hi def link dialogLibrary           Keyword
