@@ -84,7 +84,7 @@ syn match builtInLibrary            "\c\<\(WITH NAME\|AND\|Wait Until Keyword Su
 " Regions
 "------------------------------------------------------------------------
 " Single & Multi-line comments.
-syn region errorMsg     display start="#\|comment\|Comment" excludenl end="\(^\s\s\s\s\)\@<=\ze[^\.]"
+syn region errorMsg     display start="comment\|Comment" excludenl end="\(^\s\s\s\s\)\@<=\ze[^\.]"
 syn region robotString      start="\"" excludenl end='"'
 
 "------------------------------------------------------------------------
