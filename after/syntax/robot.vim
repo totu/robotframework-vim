@@ -40,7 +40,7 @@ syn match robotVariable             "\(\$\|&\|@\){.\{-}\(}]}\|}}\|}\)"
 " This is by far the most stupid regex you'll see in here..
 syn match robotPath                 display "\(\.\{1,2}\/\)\=\(\(\h\|\d\)\+\/\)\+\(\(\h\|\d\)\+\.\h\+\)\{,1}$"
 " Operators
-syn match robotOperator             "==\|="
+syn match robotOperator             "==\|=\|!="
 " Table headers
 syn match robotTable                "\c^\(\*\+\)\s*\(settings\|variables\|test cases\|\(user \)\?keywords\)\s*\1$"
 " Common settings
@@ -56,7 +56,7 @@ syn match robotGherkin              "\c\<\(Given\|When\|Then\|And\|But\)  \>"
 " Settings (global)
 syn match robotSetup                "^\c\<\(Suite\|Test\) \(Setup\|Teardown\|Precondition\|Postcondition\)\>"
 syn match robotOperator                "\c\<Special \(Suite\|Test\) \(Setup\|Teardown\|Precondition\|Postcondition\)\>"
-syn match robotSettings             "\c\<\(Library\|Resource\|Variables\|Documentation\|Metadata\|Force Tags\|Default Tags\|Test Template\|Test Timeout\)\>"
+syn match robotSettings             "\c\<\(Library\|Resource\|Variables\|Documentation\|Metadata\|Test Tags\|Force Tags\|Default Tags\|Test Template\|Test Timeout\)\>"
 
 " Standard libraries
 " List variables in reverse order to match the longest pattern not the first one.
